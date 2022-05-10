@@ -13,6 +13,7 @@ import { ContactComponent } from '../contact/contact.component';
         { path: 'menu', component: MenuComponent },
         { path: 'contact', component: ContactComponent },
         { path: 'dishdetail/:id', component: DishdetailComponent },
+        { path: 'about', component: AboutComponent },
         //ruta predeterminada.
         { path: '', redirectTo: '/home', pathMatch: 'full' }
       ];

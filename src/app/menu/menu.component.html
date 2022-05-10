@@ -11,7 +11,7 @@
 
      <div fxFlex>
         <mat-grid-list cols="2" rowHeight="200px">
-          <mat-grid-tile *ngFor="let dish of dishes" [routerLink]="['/dishdetail', dish.Id]">
+          <mat-grid-tile  *ngFor="let dish of dishes" [routerLink]="['/dishdetail', dish.Id]">
             <img height="200px" src={{dish.image}} alt={{dish.name}}>
             <mat-grid-tile-footer>
                 <!--uppercase convierte las letras de la salida en mayuscula.-->
@@ -20,6 +20,8 @@
           </mat-grid-tile>
         </mat-grid-list>
       </div>
+      
+ 
 
  
      
