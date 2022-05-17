@@ -7,12 +7,15 @@ import { LEADERS  } from '../shared/leaders';
 export class LeaderService {
 
   getLeaders():Promise<Leader[]>{
-    return Promise.resolve(LEADERS);
-  }
+    return new Promise(resolve=>{
+      setTimeout(() => resolve(LEADERS),2000)
+    })};
   getLeader(id: number): Promise<Leader>{
-return Promise.resolve(LEADERS.filter((Leader) => {Leader.id===id.toString()}) [0]);
-  }
+return new Promise(resolve => { 
+  setTimeout(() => resolve(LEADERS.filter((Leader) => {Leader.id===id.toString()}) [0]),2000)
+  })};
+  
   getFeaturedLeader(): Promise<Leader> {
-return Promise.resolve(LEADERS.filter((Leader) => Leader.featured)[0]);
-  }
+return new Promise(resolve =>{setTimeout(() =>resolve(LEADERS.filter((Leader) => Leader.featured)[0]),2000);
+})}
 }
