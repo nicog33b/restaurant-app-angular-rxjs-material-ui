@@ -6,13 +6,13 @@ import { LEADERS  } from '../shared/leaders';
 })
 export class LeaderService {
 
-  getLeaders():Leader[]{
-    return LEADERS;
+  getLeaders():Promise<Leader[]>{
+    return Promise.resolve(LEADERS);
   }
-  getLeader(id: number): Leader{
-return LEADERS.filter((Leader) => {Leader.id===id.toString()}) [0];
+  getLeader(id: number): Promise<Leader>{
+return Promise.resolve(LEADERS.filter((Leader) => {Leader.id===id.toString()}) [0]);
   }
-  getFeaturedLeader(): Leader {
-return LEADERS.filter((Leader) => Leader.featured)[0];
+  getFeaturedLeader(): Promise<Leader> {
+return Promise.resolve(LEADERS.filter((Leader) => Leader.featured)[0]);
   }
 }

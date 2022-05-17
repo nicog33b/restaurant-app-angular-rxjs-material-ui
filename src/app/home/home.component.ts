@@ -6,6 +6,7 @@ import { Promotion } from '../shared/promotion';
 import { PromotionService } from '../services/promotion.service';
 import { Leader } from '../shared/leader';
 import { LeaderService } from '../services/leader.service';
+import { PROMOTIONS } from '../shared/promotions';
 
 
 
@@ -24,9 +25,11 @@ export class HomeComponent implements OnInit {
     
 
   ngOnInit() {
-    this.leader = this.leaderservice.getFeaturedLeader();
-    this.dish = this.dishservice.getFeaturedDish();
-    this.promotion = this.promotionservice.getFeaturedPromotion();
+    //acordate de hacer el git commit -m "Promise Part 1"
+this.leaderservice.getFeaturedLeader().then(LEADERS => this.leader = LEADERS);
+this.dishservice.getFeaturedDish().then(dishes => this.dish = dishes);
+this.promotionservice.getFeaturedPromotion().then(PROMOTIONS => this.promotion = PROMOTIONS);
+
   }
 
 }
