@@ -26,9 +26,9 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     //acordate de hacer el git commit -m "Promise Part 1"
-this.leaderservice.getFeaturedLeader().then(LEADERS => this.leader = LEADERS);
-this.dishservice.getFeaturedDish().then(dishes => this.dish = dishes);
-this.promotionservice.getFeaturedPromotion().then(PROMOTIONS => this.promotion = PROMOTIONS);
+this.leaderservice.getFeaturedLeader().subscribe(LEADERS => this.leader = LEADERS);
+this.dishservice.getFeaturedDish().subscribe(dishes => this.dish = dishes);
+this.promotionservice.getFeaturedPromotion().subscribe(PROMOTIONS => this.promotion = PROMOTIONS);
 
   }
 

@@ -14,7 +14,7 @@ selectLeader!:Leader;
 
   ngOnInit(): void {
     this.leaderService.getLeaders()
-    .then(leaders => this.leaders= leaders)
+    .subscribe(leaders => this.leaders= leaders)
   }
 onSelect(leader:Leader){
   this.selectLeader=leader;
