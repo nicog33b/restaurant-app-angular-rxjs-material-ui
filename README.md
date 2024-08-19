@@ -27,7 +27,7 @@ Sigue estos pasos para clonar, instalar y ejecutar el proyecto localmente:
 
 1. **Pasos para iniciar:**:
    ```bash
-   git clone https://github.com/nicog33b/
+   git clone git@github.com:nicog33b/restaurant-app-angular-rxjs-material-ui.git
    npm install
    npm run build
    npm run start
